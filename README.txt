@@ -9,3 +9,4 @@ This project is about learning git.
 KEY FILES
   README.txt - this very file!
   command_log.md - all the git related commands I've been running
+  git_terminology.md contains definitions of common git terms.
