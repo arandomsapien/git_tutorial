@@ -3,19 +3,23 @@
 Here are all the commands I've used so far:
 
 > git init
+
 : This command created the repo
 
 > git add README.txt
+
 : Added the README.txt file to the staging area
 
 > git commit -m "Initial commit"
+
 : Did an initial commit with that README.txt file
 
-hmm... I should probably add define some terms. What is a staging area?
+hmm... I should probably define some terms. What is a staging area?
 
 Time to BRANCH OUT and start a new feature! ahahahaha...
 
 > git checkout -b git_terminology
+
 : This command created a new branch where I'll create a git_terminology.md file
 
 I created a file with some basic terminology and added it.
@@ -35,11 +39,13 @@ Since README.txt is already tracked, I can use `git commit -am` and a message to
 I made a mistake and need to undo the last commit!
 
 > git reset --soft HEAD~1
+
 : This will undo the commit but preserve the changes I made so I can patch it up. No one will be the wiser. EVIL LAUGH.
 
 Time to commit this change again and switch back to the master branch for some more work there. 
 
 > git commit -am "Updating README.txt with git_terminology.md"
+
 : Same command as last time, but I fixed my mistake!
 
 > git checkout master
