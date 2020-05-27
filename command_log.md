@@ -44,4 +44,51 @@ Time to commit this change again and switch back to the master branch for some m
 
 > git checkout master
 
-Here I am safely back on the master branch. I just realized, my command_log.md file isn't staged! Time to remedy that.
+Here I am safely back on the master branch. 
+
+I just realized, my command_log.md file isn't staged! Time to remedy that.
+
+> git add command_log.md
+
+While I'm here, I think I should add a KEY FILES section to the README to join that mention in the other branch. 
+
+Since both these files are already tracked, I'll run `git commit` with the `-am` switches
+
+> git commit -am "Added key files section to the readme"
+
+I think that other branch is all done being developed. Time to merge it back in.
+
+> git merge git_terminology
+
+AN ERROR?! Say it ain't so.
+
+```
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+How can I fix this... 
+
+Since I'm in Visual Studio Code, I went to the git plugin and see a 'C' beside the README.txt file... That might mean there's a conflict to solve!
+
+Clicking on the file actually shows the diff. I want to keep both changes though, so I'll click that option.
+
+Now that I've fixed the conflict, I'll create a commit with that un-broken file.
+
+> git commit -am "fixing merge conflicts"
+
+What does the log say now?
+
+> git log --oneline
+
+```
+db50789 (HEAD -> master) fixing merge conflicts
+1f37354 Added key files section to the readme
+072783b Added command_log.md file
+662f04c (git_terminology) Updating README.txt with git_terminology.md
+24141f2 Added terminology file
+73a2238 Initial commit
+```
+
+Perfect. Time to commit this last change to the command_log.md file and be done with it, for now. 
